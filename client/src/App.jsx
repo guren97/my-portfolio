@@ -13,7 +13,6 @@ import Projects from "./pages/Projects/Projects.jsx";
 import Services from "./pages/Services/Services.jsx";
 
 import Header from "./components/Header/Header.jsx";
-import Sidebar from "./components/Sidebar.jsx/Sidebar.jsx";
 
 // Main location provider - AnimatePresence
 function LocationProvider({ children }) {
