@@ -1,4 +1,4 @@
-// import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import {
   useLocation,
   BrowserRouter as Router,
@@ -6,20 +6,21 @@ import {
   Route,
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home.jsx";
 import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About.jsx";
 import Projects from "./pages/Projects/Projects.jsx";
 import Services from "./pages/Services/Services.jsx";
 
 import Header from "./components/Header/Header.jsx";
+import Sidebar from "./components/Sidebar.jsx/Sidebar.jsx";
 
-//Main location provider - AnimatePresence
+// Main location provider - AnimatePresence
 function LocationProvider({ children }) {
-  return <AnimatePresence>{children}</AnimatePresence>;
+  return <AnimatePresence initial={false}>{children}</AnimatePresence>;
 }
 
-//Get all routes to add
+// Get all routes to add
 function RoutesWithAnimation() {
   const location = useLocation();
 
@@ -36,14 +37,18 @@ function RoutesWithAnimation() {
 
 function App() {
   return (
-    <div className="px-24">
+    <>
       <Router>
         <LocationProvider>
-          <Header />
-          <RoutesWithAnimation />
+          <header>
+            <Header />
+          </header>
+          <main className=" ">
+            <RoutesWithAnimation />
+          </main>
         </LocationProvider>
       </Router>
-    </div>
+    </>
   );
 }
 

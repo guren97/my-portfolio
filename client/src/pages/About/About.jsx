@@ -3,7 +3,7 @@ import { easeOut, motion } from "framer-motion";
 const About = () => {
   return (
     <>
-      <motion.main className="h-dvh w-full text-slate-900 absolute top-0 left-0  mx-0 lg:px-80 px-24 ">
+      <motion.main className="h-12 w-full relative transition duration-200 dark:bg-slate-800 flex items-center align-middle">
         <div className="my-96">
           <div className="flex flex-col tracking-wide">
             {" "}
