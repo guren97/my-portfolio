@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   useLocation,
   BrowserRouter as Router,
@@ -15,8 +14,9 @@ import Services from "./pages/Services/Services.jsx";
 import Header from "./components/Header/Header.jsx";
 
 // Main location provider - AnimatePresence
+// eslint-disable-next-line react/prop-types
 function LocationProvider({ children }) {
-  return <AnimatePresence initial={false}>{children}</AnimatePresence>;
+  return <AnimatePresence>{children}</AnimatePresence>;
 }
 
 // Get all routes to add
