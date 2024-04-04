@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div>
       <div
-        className="h-full relative dark:bg-black dark:text-slate-50"
+        className="h-full   relative dark:bg-neutral-900 dark:text-slate-50"
         id="js-scroll"
       >
         <Sections id="about_section">
@@ -34,8 +34,8 @@ const Home = () => {
               div
               className="w-4/12 absolute ml-36 "
             >
-              <h1 className="text-2xl font-medium">Hey there, I'm</h1>
-              <h1 className="text-6xl font-semibold translate-x-4">
+              <h1 className="text-2xl font-medium">Hey there, {"I'm"}</h1>
+              <h1 className="text-6xl font-semibold translate-x-4 ">
                 Gwen Bautista,
               </h1>
               <p className="tracking-wide py-4 text-sm translate-x-3 text-wrap">

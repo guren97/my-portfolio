@@ -1,12 +1,12 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { IoSunny, IoMoon } from "react-icons/io5";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import logo_dark from "../../assets/logo_dark.png";
 import logo_light from "../../assets/logo_light.png";
-import { useState, useRef } from "react";
-import { Link } from "react-router-dom";
-import { IoSunny, IoMoon } from "react-icons/io5";
 import NavLinks from "../custom_ui/Navlinks.jsx";
 
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 const Header = () => {
   const [isDark, setIsDark] = useState(false);
   const [nav, setNav] = useState(false);
@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="h-12 px-4 py-8 lg:py-8 sm:py-8 sm:px-8 md:px-24 md:py-8  z-10 mx-auto relative flex justify-between items-center align-middle transition duration-200 dark:bg-black">
+      <header className="h-12 px-4 py-8 lg:py-8 sm:py-8 sm:px-8 md:px-24 md:py-8 z-10 mx-auto relative flex justify-between items-center align-middle transition duration-200 bg-slate-50 dark:bg-neutral-800">
         {/* Mobile Navigation */}
         <div className="sm:hidden ">
           <div onClick={() => setNav(!nav)} className="cursor-pointer ">
@@ -43,7 +43,7 @@ const Header = () => {
             className="sm:hidden md:inline-block lg:inline-block"
             onClick={darkModeHandler}
           >
-            <div className="w-8 h-8 mr-4 flex items-center justify-center align-middle hover:bg-slate-300  dark:hover:bg-slate-300 rounded-lg transition duration-200 ">
+            <div className="w-8 h-8 mr-4 flex items-center justify-center align-middle   hover:bg-yellow-300  dark:hover:bg-yellow-300 rounded-lg transition duration-200 ">
               {isDark ? (
                 <motion.button
                   // whileHover={{scale: 1}}
@@ -51,7 +51,7 @@ const Header = () => {
                   transition={{}}
                   exit={{}}
                 >
-                  <IoSunny className="dark:text-slate-100 dark:hover:text-black text-2xl" />
+                  <IoSunny className="dark:text-slate-100 dark:hover:text-black text-2xl m-2" />
                 </motion.button>
               ) : (
                 <motion.button
@@ -70,7 +70,7 @@ const Header = () => {
         {nav ? (
           <div
             onClick={() => setNav(!nav)}
-            className="bg-black  fixed w-full h-screen z-10 top-0 left-0"
+            className="bg-black/50  fixed w-full h-screen z-10 top-0 left-0"
           ></div>
         ) : (
           ""
@@ -80,8 +80,8 @@ const Header = () => {
         <div
           className={
             nav
-              ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300 dark:bg-slate-950"
-              : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300"
+              ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300 dark:bg-neutral-800"
+              : "fixed top-0 left-[-100%] w-[400px] h-screen bg-white z-10 duration-300"
           }
         >
           <AiOutlineClose

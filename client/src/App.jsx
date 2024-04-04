@@ -39,12 +39,8 @@ function App() {
     <>
       <Router>
         <LocationProvider>
-          <header>
-            <Header />
-          </header>
-          <main className=" ">
-            <RoutesWithAnimation />
-          </main>
+          <Header />
+          <RoutesWithAnimation />
         </LocationProvider>
       </Router>
     </>
