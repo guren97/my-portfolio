@@ -1,50 +1,35 @@
-import { easeOut, motion } from "framer-motion";
-
+import { motion } from "framer-motion";
+// eslint-disable-next-line react/prop-types
 const About = () => {
   return (
     <>
-      <motion.main className="h-12 w-full relative transition duration-200 dark:bg-slate-800 flex items-center align-middle">
-        <div className="my-96">
-          <div className="flex flex-col tracking-wide">
-            {" "}
-            <motion.h1
-              initial={{ opacity: 0, x: 0 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.75, delay: 0.4, ease: easeOut }}
-              exit={{ opacity: 1 }}
-              className="text-6xl font-medium text-center mb-6"
-            >
-              About Page
-            </motion.h1>
-          </div>
-        </div>
-      </motion.main>
+      {" "}
+      <section className="w-full p-0 m-0 absolute -py-24 flex justify-between items-center align-middle gap-10 -mt-8 ">
+        <motion.div
+          initial={{ opacity: 0, y: 100, scale: 0.5 }}
+          animate={{ opacity: 1, y: 0, scale: 1.1 }}
+          transition={{ duration: 0.75 }}
+          exit={{ opacity: 0 }}
+          div
+          className="w-5/12 absolute ml-24 -my-40"
+        >
+          <h1 className="text-2xl">Hey there, I'm</h1>
+          <h1 className="text-6xl font-semibold translate-x-4">
+            Gwen Bautista,
+          </h1>
+          <p className="tracking-wide py-4 text-sm translate-x-3">
+            a passionate
+            <span className="text-1xl font-semibold">
+              {" "}
+              Developer & Designer{" "}
+            </span>
+            with a love for Creating and Designing websites for you. I aim to
+            showcase my skills, experiences, and projects that highlight my
+            journey in the world of evolving technology.
+          </p>
+        </motion.div>
+      </section>
     </>
   );
 };
 export default About;
-// <div className="h-screen bg-slate-neutral-950  absolute">
-//   <div className="flex flex-col lg:flex-row h-full justify-center items-center gap-10 p-10 lg:p-36">
-//     <section
-//       id="image-section"
-//       className="border  bg-slate-300 border-red-500 rounded-lg lg:rounded-3xl h-full w-full lg:w-1/2"
-//     >
-//       <div className="aspect-w-16 aspect-h-9">
-//         <img
-//           id="image"
-//           className="w-full h-full object-cover"
-//           src="#"
-//           alt="Profile Pic"
-//         />
-//       </div>
-//     </section>
-//     <section
-//       id="about-info-section"
-//       className="border  bg-slate-300 border-red-500  h-full w-full lg:w-1/2"
-//     >
-//       <h1 className="text-4xl lg:text-6xl font-bold text-red-300 text-center lg:text-left">
-//         GWEN BAUTISTA
-//       </h1>
-//     </section>
-//   </div>
-// </div>
